@@ -1,0 +1,5 @@
+@media print {
+    .fi-sidebar, .fi-topbar, .fi-btn, .fi-ta-search-field {
+      display: none !important;
+    }
+  }

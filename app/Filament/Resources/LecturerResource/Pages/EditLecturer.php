@@ -1,0 +1,27 @@
+<?php
+
+namespace App\Filament\Resources\LecturerResource\Pages;
+
+use App\Filament\Resources\LecturerResource;
+use Filament\Actions;
+use Filament\Resources\Pages\EditRecord;
+
+class EditLecturer extends EditRecord
+{
+    protected static string $resource = LecturerResource::class;
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\ViewAction::make(),
+            Actions\DeleteAction::make(),
+            Actions\ForceDeleteAction::make(),
+            Actions\RestoreAction::make(),
+        ];
+    }
+}
